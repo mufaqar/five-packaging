@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { FaPlay } from "react-icons/fa";
 
 function Why_ChooseUs() {
     return (
         <section className='py-16'>
             <div className='container mx-auto px-4'>
-                <div className='bg-darkBlue max-w-[666px] mx-auto py-12 rounded-[93px]'>
-                    <h2 className='md:text-4xl text-3xl font-semibold text-white text-center'>
+                <div className='bg-darkBlue max-w-[666px] mx-auto md:py-12 p-4 rounded-[93px]'>
+                    <h2 className='md:text-4xl text-2xl font-semibold text-white text-center'>
                         Why Choose Us?
                     </h2>
-                    <p className='text-lg font-normal text-white text-center max-w-[800px] mx-auto mt-5'>
+                    <p className='md:text-lg text-base font-normal text-white text-center max-w-[800px] mx-auto mt-5'>
                         Accomplish Your Business Goals With Our Superior Service
                     </p>
                 </div>
@@ -40,11 +41,27 @@ function Why_ChooseUs() {
                         </h3>
                     </div>
                 </div>
-                <div className='mt-10'>
-                    <Link href="#" className='bg-primary hover:bg-secondary px-8 py-4 text-sm font-semibold text-white block w-fit mx-auto'>
-                        Request for Quote
-                    </Link>
+            </div>
+            <div className='bg-[#FDF0D5] py-10 mt-8'>
+                <div className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
+                    <div className='md:w-1/3 w-full'>
+                        <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
+                            How do we make our products
+                        </h2>
+                        <p className='text-2xl font-normal text-title_Clr'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </p>
+                    </div>
+                    <div className='md:w-2/3 w-full relative'>
+                        <Image src="/images/make-product.png" alt='make-product' width={826} height={472} className='w-full object-cover' />
+                        <FaPlay className="text-5xl text-white absolute inset-y-1/2 inset-x-1/2" />
+                    </div>
                 </div>
+            </div>
+            <div className='mt-10'>
+                <Link href="#" className='bg-primary hover:bg-secondary px-8 py-4 text-sm font-semibold text-white block w-fit mx-auto'>
+                    Request for Quote
+                </Link>
             </div>
         </section>
     )

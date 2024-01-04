@@ -15,7 +15,7 @@ import Head from 'next/head'
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
     const relatedProducts = productsRes?.filter((item: any) => item.categories?.slug?.current === query.slug)
-
+console.log(relatedProducts)
     return (
         <>
         <Head>

@@ -3,10 +3,10 @@ import React from 'react'
 
 function Choose_Us() {
     return (
-        <section className='bg-secondary'>
+        <section className='bg-[#373F3C]'>
             <div className='flex lg:flex-row flex-col gap-10'>
                 <div className='lg:w-1/2 w-full'>
-                    <Image src="/images/choose-us.png" alt='choose-us' width={556} height={398} />
+                    <Image src="/images/choose-us.png" alt='choose-us' width={556} height={398} className='h-full w-full ' />
                 </div>
                 <div className='lg:w-1/2 w-full lg:py-16 py-10 px-4'>
                     <div className='max-w-[610px] lg:ml-0'>

@@ -39,7 +39,7 @@ function Qoute_Form() {
       
     return (
         <div className='max-w-[514px] mx-auto shadow-[0_4px_86px_0_rgba(0,0,0,0.15)]'>
-            <h2 className='text-2xl font-semibold text-white px-8 py-3.5 bg-secondary'>
+            <h2 className='text-2xl font-semibold text-white px-8 py-3.5 bg-darkBlue'>
                 Instant Quote
             </h2>
             <form className="grid w-full gap-4 items-center bg-[#F7F7F7] px-5 py-10" onSubmit={handleSubmit(onSubmit)}>

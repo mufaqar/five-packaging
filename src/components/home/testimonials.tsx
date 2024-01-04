@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa'
 
 function Testimonials({ data }: any) {
     return (
-        <section className='py-16 bg-[#F7F7F7]'>
+        <section className='py-16 bg-darkBlue'>
             <div className='container mx-auto px-4'>
                 <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-7'>
                     {

@@ -8,19 +8,19 @@ import Testimonials from '@/components/home/testimonials'
 import Faqs from '@/components/home/faqs'
 import Get_Qoute from '@/components/home/get-qoute'
 import { client } from '../../sanity/lib/client'
-import {Qcategories, Qfaqs, Qproducts, Qtestimonials} from '../../sanity/queries'
+import { Qcategories, Qfaqs, Qproducts, Qtestimonials } from '../../sanity/queries'
 const inter = Inter({ subsets: ['latin'] })
-export default function Home({testimonialsRes, faqRes, categoriesRes, productsRes}:any) {
+export default function Home({ testimonialsRes, faqRes, categoriesRes, productsRes }: any) {
 
   return (
     <main className={``} >
       <MainBanner />
-      <Packaging_Style data={categoriesRes}/>
+      <Packaging_Style data={categoriesRes} />
+      <Packing_Design data={productsRes} title="Custom Packaging Boxes" content="Choose a packaging style for your custom boxes, start designing with us, and get your boxes with the most advanced printing techniques." />
       <HowIt_work />
-      <Packing_Design data={productsRes} title="Custom Packaging Boxes" content="Choose a packaging style for your custom boxes, start designing with us, and get your boxes with the most advanced printing techniques."/>
       <Why_ChooseUs />
-      <Testimonials data={testimonialsRes}/>
-      <Faqs data={faqRes}/>
+      <Testimonials data={testimonialsRes} />
+      <Faqs data={faqRes} />
       <section className='py-16'>
         <div className='container mx-auto px-4'>
           <div>

@@ -16,8 +16,10 @@ const config: Config = {
       colors: {
         title_Clr: "#0B0B0B",
         txt_Clr: "#666666",
-        primary: "#2B4FB9",
-        secondary: "#FF4C00",
+        primary: "#C13112",
+        secondary: "#6B0600",
+        darkBlue: "#003049",
+        lightBlue: "#669BBC",
       }
     },
   },

@@ -28,12 +28,22 @@
   src: url('../../public/fonts/Poppins-Regular.ttf');
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'PoppinsBold';
 }
-p,li,span,a{
+
+p,
+li,
+span,
+a {
   font-family: 'PoppinsRegular';
 }
+
 body,
 * {
   box-sizing: border-box;
@@ -71,4 +81,25 @@ html {
   height: 100%;
   object-position: center;
   object-fit: contain;
+}
+
+.link_activ {
+  position: relative;
+}
+
+.link_activ::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: aqua;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.link_activ::after {
+  width: 100%;
+
 }

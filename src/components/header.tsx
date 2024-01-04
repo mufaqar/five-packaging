@@ -7,11 +7,12 @@ import { BsTelephone } from 'react-icons/bs'
 import { FaBars } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import SearchForm from './searchForm'
+import { useRouter } from 'next/router'
 
 function Header() {
   const [openNav, setOpenNav] = useState(false);
   const [openSearch, setOpenSearch] = useState(false)
-  
+  const router = useRouter()
 
   return (
     <>
@@ -19,7 +20,7 @@ function Header() {
         <div className='container mx-auto px-4 flex gap-5 items-center justify-between'>
           <div className='lg:w-[20%] w-1/2'>
             <Link href="/">
-              <Image src="/images/logo.png" alt='logo' width={190} height={42} />
+              <Image src="/images/logo.png" alt='logo' width={139} height={58} />
             </Link>
           </div>
           <nav className='lg:w-[43%] w-1/2 flex items-center'>
@@ -31,7 +32,7 @@ function Header() {
               {NavLinks?.map((item: any, idx: number) => {
                 return (
                   <li key={idx}>
-                    <Link href={`${item?.link}`} className='text-base font-bold text-title_Clr hover:text-secondary'>
+                    <Link href={`${item?.link}`} className={`text-base font-bold text-title_Clr hover:link_activ  ${router.pathname === item.link && "link_activ"}`}>
                       {item?.name}
                     </Link>
                   </li>

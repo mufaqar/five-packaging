@@ -3,13 +3,13 @@ import ServiceBox from './serviceBox'
 
 function HowIt_work() {
     return (
-        <section className='py-16 bg-[#F7F7F7]'>
+        <section className='py-16 bg-primary'>
             <div className='container mx-auto px-4'>
                 <div>
-                    <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr text-center'>
+                    <h2 className='md:text-4xl text-3xl font-semibold text-white text-center'>
                         How it works
                     </h2>
-                    <p className='text-lg font-normal text-txt_Clr text-center max-w-[880px] mx-auto mt-5'>
+                    <p className='text-lg font-normal text-white text-center max-w-[985px] mx-auto mt-5'>
                         Select a packaging style, quantity, and choose from custom or stock sizes – then start designing your custom boxes. Add customization options like images, text, and any color your brand requires. As you design you'll see an instant quote so you know exactly what your final order will come to.
                     </p>
                 </div>

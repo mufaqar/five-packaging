@@ -6,11 +6,11 @@ function Why_ChooseUs() {
     return (
         <section className='py-16'>
             <div className='container mx-auto px-4'>
-                <div>
-                    <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr text-center'>
+                <div className='bg-darkBlue max-w-[666px] mx-auto py-12 rounded-[93px]'>
+                    <h2 className='md:text-4xl text-3xl font-semibold text-white text-center'>
                         Why Choose Us?
                     </h2>
-                    <p className='text-lg font-normal text-txt_Clr text-center max-w-[800px] mx-auto mt-5'>
+                    <p className='text-lg font-normal text-white text-center max-w-[800px] mx-auto mt-5'>
                         Accomplish Your Business Goals With Our Superior Service
                     </p>
                 </div>

@@ -13,72 +13,58 @@ import { urlForImage } from '../../../sanity/lib/image'
 import Head from 'next/head'
 import Qoute_Sec from '@/components/products/qoute-sec'
 import InstantPrice from '@/components/instant-price'
+import Content_Slider from '@/components/content-slider'
 
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
     const relatedProducts = productsRes?.filter((item: any) => item.categories?.slug?.current === query.slug)
-console.log(relatedProducts)
+    console.log(relatedProducts)
     return (
         <>
-        <Head>
-            <title>{categoryRes?.metatitle}</title>
-            <meta name='keywords' content={categoryRes?.metatags}/>
-            <meta name='description' content={categoryRes?.metadescription}/>
-            <meta name='subject' content="products" />
-            <meta name='copyright' content='packhoop'/>
-            <meta name='language' content='En'/>
-            <meta name='robots' content='index,follow'/>
-            <meta name='subtitle' content={categoryRes?.metadescription}/>
-            <meta name='target' content={categoryRes?.metatitle}/>
-        </Head>
-        <main>
-            <Banner data={categoryRes} />
-            <Get_Started data={categoryRes} />
-            <section className='py-16'>
-                <div className='container mx-auto px-4 grid gap-16'>
-                    {
-                        categoryRes?.grid?.map((item: any, idx: number) => (
-                            <ContentBox
-                                img={urlForImage(item?.image?.asset?._ref).width(306)?.url()}
-                                Cstm_class={` ${idx%2 === 0 ? 'lg:flex-row flex-col' : 'lg:flex-row-reverse flex-col'}`}
-                                key={idx}
-                                title={item.title}
-                                list={item.list}
-                            />
-                        ))
-                    }
-
-                </div>
-            </section>
-            <section className='py-16'>
-                <div className='container mx-auto px-4'>
-                    <div>
-                        <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
-                            Mailer Boxes Products
-                        </h2>
+            <Head>
+                <title>{categoryRes?.metatitle}</title>
+                <meta name='keywords' content={categoryRes?.metatags} />
+                <meta name='description' content={categoryRes?.metadescription} />
+                <meta name='subject' content="products" />
+                <meta name='copyright' content='packhoop' />
+                <meta name='language' content='En' />
+                <meta name='robots' content='index,follow' />
+                <meta name='subtitle' content={categoryRes?.metadescription} />
+                <meta name='target' content={categoryRes?.metatitle} />
+            </Head>
+            <main>
+                <Banner data={categoryRes} />
+                <Get_Started data={categoryRes} />
+                <Content_Slider data={categoryRes?.grid} />
+                <section className='py-16'>
+                    <div className='container mx-auto px-4'>
+                        <div>
+                            <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
+                                Mailer Boxes Products
+                            </h2>
+                        </div>
+                        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 mt-10'>
+                            {
+                                relatedProducts?.map((product: any, i: number) => (
+                                    <DesignBox
+                                        key={i}
+                                        slug={product.slug}
+                                        title={product.title}
+                                        img={urlForImage(product?.image?.asset?._ref).width(306)?.url()}
+                                    />
+                                ))
+                            }
+                        </div>
                     </div>
-                    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 mt-10'>
-                        {
-                            relatedProducts?.map((product: any, i: number) => (
-                                <DesignBox
-                                    key={i}
-                                    slug={product.slug}
-                                    title={product.title}
-                                    img={urlForImage(product?.image?.asset?._ref).width(306)?.url()}
-                                />
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
-            <InstantPrice />
-            <Technical_Specs />
-            <Qoute_Sec />
-            <Choose_Us />
-            <Cat_Faqs faqRes={faqRes}/>
-            <Order_Process />
-            <Cta />
-        </main>
+                </section>
+                <InstantPrice />
+                <Technical_Specs />
+                <Qoute_Sec />
+                <Choose_Us />
+                <Cat_Faqs faqRes={faqRes} />
+                <Order_Process />
+                <Cta />
+            </main>
         </>
     )
 }

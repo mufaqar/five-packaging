@@ -11,6 +11,8 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { urlForImage } from '../../../sanity/lib/image'
 import Head from 'next/head'
+import Qoute_Sec from '@/components/products/qoute-sec'
+import InstantPrice from '@/components/instant-price'
 
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
@@ -69,6 +71,9 @@ console.log(relatedProducts)
                     </div>
                 </div>
             </section>
+            <InstantPrice />
+            <Technical_Specs />
+            <Qoute_Sec />
             <Choose_Us />
             <Cat_Faqs faqRes={faqRes}/>
             <Order_Process />

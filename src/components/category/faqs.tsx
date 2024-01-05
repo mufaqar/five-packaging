@@ -27,7 +27,7 @@ function Cat_Faqs({faqRes}:any) {
                     {faqRes?.map((faq: any, index: number) => (
                         <div key={index}>
                             <h3 className='md:text-2xl text-lg font-semibold text-title_Clr flex items-center cursor-pointer' onClick={() => handleFaq(index)}>
-                                <FaCircleArrowRight className="text-secondary w-16" />
+                                <FaCircleArrowRight className="text-primary w-16" />
                                 {faq.question}
                             </h3>
                             <div className={`mt-3 md:pl-16 pl-10 `}>

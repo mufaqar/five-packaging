@@ -3,8 +3,8 @@ import React from 'react'
 
 function Qoute_Sec() {
     return (
-        <section className='bg-darkBlue lg:py-16 py-10 '>
-            <div className='container mx-auto px-4 flex lg:flex-row flex-col lg:gap-10 gap-5 items-center'>
+        <section className='pt-10'>
+            <div className='container mx-auto lg:px-10 px-4 flex lg:flex-row flex-col lg:gap-10 gap-5 items-center bg-darkBlue lg:py-16 py-10'>
                 <div className='lg:w-2/3 w-full'>
                     <div className=''>
                         <h2 className='md:text-2xl text-2xl font-semibold text-white'>

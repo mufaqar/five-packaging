@@ -45,9 +45,9 @@ export default function Product({productRes, faqRes}:any) {
                     }
                 </div>
             </section>
+            <Technical_Specs mailerbox={productRes?.mailerbox}/>
             <Qoute_Sec />
             <Choose_Us />
-            <Technical_Specs mailerbox={productRes?.mailerbox}/>
             <Cat_Faqs faqRes={faqRes}/>
             <Order_Process data={productRes?.orderprocess}/>
             <Cta />

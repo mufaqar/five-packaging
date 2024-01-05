@@ -17,7 +17,7 @@ function ContentBox({ Cstm_class, img, title, list }: any) {
                         list?.map((l: any, i: any) => (
                             <li key={i}>
                                 <h3 className='text-base font-semibold text-txt_Clr flex items-center'>
-                                    <FaCircleArrowRight className="text-secondary w-10" />
+                                    <FaCircleArrowRight className="text-primary w-10" />
                                     {l.title}
                                 </h3>
                                 <p className='text-base font-normal text-txt_Clr pl-10'>

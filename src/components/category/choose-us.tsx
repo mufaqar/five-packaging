@@ -3,8 +3,8 @@ import React from 'react'
 
 function Choose_Us() {
     return (
-        <section className='bg-[#373F3C]'>
-            <div className='flex lg:flex-row flex-col gap-10'>
+        <section className=''>
+            <div className='container mx-auto flex lg:flex-row flex-col gap-10 bg-[#373F3C]'>
                 <div className='lg:w-1/2 w-full'>
                     <Image src="/images/choose-us.png" alt='choose-us' width={556} height={398} className='h-full w-full ' />
                 </div>

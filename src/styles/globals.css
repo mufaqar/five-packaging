@@ -103,3 +103,26 @@ html {
   width: 100%;
 
 }
+
+#grid_slider .slick-dots li {
+  width: 66px;
+  height: 3px;
+}
+
+#grid_slider .slick-dots li button {
+  width: 100%;
+  height: 100%;
+}
+
+#grid_slider .slick-dots li button:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #CDCFCE;
+  opacity: 1;
+}
+
+#grid_slider .slick-dots li button:hover:before,
+#grid_slider .slick-dots li.slick-active button:before {
+  background-color: #9CEB1B;
+}

@@ -13,7 +13,7 @@ export const Qproducts = `*[ _type == "products"]{
      slug,
      excerpt,
      content,
-     categories->{
+     categories[]->{
           name,
           slug
      }

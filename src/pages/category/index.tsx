@@ -16,12 +16,9 @@ import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
 
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
-    console.log("🚀 ~ file: index.tsx:19 ~ Category ~ productsRes:", productsRes)
     const { query } = useRouter()
-    console.log("🚀 ~slug:", query)
     const relatedProducts = productsRes?.filter((item: any) => item?.categories?.some((i:any)=>i.slug?.current === query.slug))
-    console.log("🚀 ~ file: index.tsx:21 ~ Category ~ relatedProducts:", relatedProducts)
-    
+ 
     return (
         <>
             <Head>

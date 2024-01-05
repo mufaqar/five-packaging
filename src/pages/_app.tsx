@@ -6,10 +6,10 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const {asPath} = useRouter()
+  const { asPath } = useRouter()
   return <>
     <Head>
-      <title>Packhoop</title>
+      <title>Five Packaging | Custom packaging, simplified</title>
     </Head>
     {!asPath.includes('studio') && <Header />}
     <Component {...pageProps} />

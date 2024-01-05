@@ -35,8 +35,8 @@ function SearchForm() {
     };
 
     return (
-        <div className="bg-black/20 h-screen w-full flex flex-col justify-center items-center">
-            <form action="" className="max-w-[480px] w-full px-4">
+        <div className="">
+            <form action="" className="max-w-[480px] mx-auto w-full px-4">
                 <div className="relative">
                     <input
                         type="text"
@@ -45,10 +45,10 @@ function SearchForm() {
                         name="search"
                         value={searchTerm}
                         onChange={handleSearch}
-                        className="w-full border h-12 shadow p-4 rounded-full focus:border focus:border-[#2B4FB9] outline-0 ring-0 placeholder:text-[#2B4FB9] text-lg"
+                        className="w-full h-12 p-4 rounded-[7px] bg-[#F3F3F3] focus:border-none outline-0 ring-0 placeholder:text-txt_Clr text-lg"
                     />
                     <button type="button" onClick={handleAlert}>
-                        <AiOutlineSearch className="text-2xl text-[#12577E] h-5 w-5 absolute top-3.5 right-3 fill-current" />
+                        <AiOutlineSearch className="text-2xl text-txt_Clr h-5 w-5 absolute top-3.5 right-3 fill-current" />
                     </button>
                 </div>
             </form>

@@ -15,7 +15,6 @@ import Content_Slider from '@/components/content-slider'
 
 
 export default function Product({ productRes, faqRes }: any) {
-    console.log("🚀 ~ file: product.tsx:16 ~ Product ~ productRes:", productRes)
     return (
         <>
             <Head>

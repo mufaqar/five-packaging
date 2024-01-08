@@ -189,53 +189,53 @@ export const products = {
         }
       ]
     },
-    {
-      title: 'Faqs',
-      name: 'faqs',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [
-            {type: 'faqs'},
-          ]
-        }
-      ]
-    },
-    {
-      title: 'Mailer Box',
-      name: 'mailerbox',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              title: 'List',
-              name: 'list',
-              type: 'array',
-              of: [
-                {
-                  type: 'object',
-                  fields: [
-                    {
-                      name: 'title',
-                      type: 'string',
-                      title: 'Title'
-                    },
-                    {
-                      name: 'content',
-                      type: 'text',
-                      title: 'Content'
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
+    // {
+    //   title: 'Faqs',
+    //   name: 'faqs',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       type: 'reference',
+    //       to: [
+    //         {type: 'faqs'},
+    //       ]
+    //     }
+    //   ]
+    // },
+    // {
+    //   title: 'Mailer Box',
+    //   name: 'mailerbox',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       type: 'object',
+    //       fields: [
+    //         {
+    //           title: 'List',
+    //           name: 'list',
+    //           type: 'array',
+    //           of: [
+    //             {
+    //               type: 'object',
+    //               fields: [
+    //                 {
+    //                   name: 'title',
+    //                   type: 'string',
+    //                   title: 'Title'
+    //                 },
+    //                 {
+    //                   name: 'content',
+    //                   type: 'text',
+    //                   title: 'Content'
+    //                 }
+    //               ]
+    //             }
+    //           ]
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
     
   ]
 }

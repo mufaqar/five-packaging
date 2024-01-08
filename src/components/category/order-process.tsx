@@ -19,7 +19,7 @@ function Order_Process({ data }: any) {
                             <OrderBox
                                 key={idx}
                                 title={item.title}
-                                content={item.detail}
+                                content={item?.detail}
                             />
                         ))
                     }

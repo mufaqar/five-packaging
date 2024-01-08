@@ -1,6 +1,42 @@
-import React from 'react'
+import React, { FormEvent, useRef, useState } from 'react'
+import { useForm, SubmitHandler } from "react-hook-form"
+
 
 function InstantPrice() {
+    const [loading, setLoading] = useState(false);
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm<any>()
+    const onSubmit: SubmitHandler<any> = (data) => {
+        const blobImage = new Blob([data.file[0]], { type: data.file[0].type });
+        const imageUrl = URL.createObjectURL(blobImage);
+        data.file = imageUrl
+        setLoading(true);
+        SendMail()
+        function SendMail() {
+            fetch('/api/inquery', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            }).then((res) => {
+                console.log('Response received');
+                if (res.status === 200) {
+                    console.log('Response succeeded!');
+                    alert('Message Successfully send.!');
+                    reset();
+                    setLoading(false);
+                }
+            });
+        }
+    }
+
     return (
         <section className='py-7'>
             <div className='container mx-auto px-4 md:px-10 py-10 bg-[#FDF0D5] rounded-[18px]'>
@@ -13,21 +49,25 @@ function InstantPrice() {
                     </p>
                 </div>
                 <div className='bg-white rounded-[18px] px-4 md:px-10 py-10 mt-5'>
-                    <form className='flex flex-col gap-7'>
+                    <form className='flex flex-col gap-7' onSubmit={handleSubmit(onSubmit)}>
                         <div className='flex md:flex-row flex-col justify-between gap-7 items-center'>
                             <div className='w-full flex flex-col gap-1'>
                                 <label htmlFor='box_type' className='text-base font-normal text-txt_Clr'>
                                     Box Type
                                 </label>
-                                <select id='box_type' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
-                                    <option>Select Box Type</option>
+                                <select id='box_type' {...register("box_type", { required: true })} className='text-xs font-normal text-[#B1B1B1] px-1 p-2 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                    <option disabled>Select Box Type</option>
+                                    <option>Shipping Boxes</option>
+                                    <option>Mailer Boxes</option>
+                                    <option>Product Boxes</option>
+                                    <option>Rigid Boxes</option>
                                 </select>
                             </div>
                             <div className='w-full flex flex-col gap-1'>
                                 <label htmlFor='material' className='text-base font-normal text-txt_Clr'>
                                     Materials
                                 </label>
-                                <select id='material' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='material' {...register("material", { required: true })} className='text-xs font-normal text-[#B1B1B1] p-2 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>Select Materials</option>
                                 </select>
                             </div>
@@ -36,11 +76,11 @@ function InstantPrice() {
                                     Length
                                 </label>
                                 <input
+                                    {...register("length", { required: true })}
                                     id='length'
-                                    name='length'
                                     type='number'
                                     placeholder=''
-                                    className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
+                                    className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
                                 />
                             </div>
                             <div className='w-full flex flex-col gap-1'>
@@ -49,10 +89,10 @@ function InstantPrice() {
                                 </label>
                                 <input
                                     id='width'
-                                    name='width'
+                                    {...register("width", { required: true })}
                                     type='number'
                                     placeholder=''
-                                    className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
+                                    className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
                                 />
                             </div>
                             <div className='w-full flex flex-col gap-1'>
@@ -61,18 +101,20 @@ function InstantPrice() {
                                 </label>
                                 <input
                                     id='height'
-                                    name='height'
+                                    {...register("height", { required: true })}
                                     type='number'
                                     placeholder=''
-                                    className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
+                                    className='text-xs font-normal p-2 text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
                                 />
                             </div>
                             <div className='w-full flex flex-col gap-1'>
                                 <label htmlFor='dimension' className='text-base font-normal text-txt_Clr'>
                                     Dimension Unit
                                 </label>
-                                <select id='dimension' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='dimension' {...register("dimension", { required: true })} className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>Inch</option>
+                                    <option>CM</option>
+                                    <option>MM</option>
                                 </select>
                             </div>
                             <div className='w-full flex flex-col gap-1'>
@@ -81,10 +123,10 @@ function InstantPrice() {
                                 </label>
                                 <input
                                     id='quantity'
-                                    name='quantity'
+                                    {...register("quantity", { required: true })}
                                     type='number'
                                     placeholder=''
-                                    className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
+                                    className='text-xs font-normal p-2 text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
                                 />
                             </div>
                         </div>
@@ -93,7 +135,7 @@ function InstantPrice() {
                                 <label htmlFor='printing' className='text-base font-normal text-txt_Clr'>
                                     Printing Sides
                                 </label>
-                                <select id='printing' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='printing' {...register("printing", { required: true })} className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>Outside Only</option>
                                 </select>
                             </div>
@@ -101,7 +143,7 @@ function InstantPrice() {
                                 <label htmlFor='thickness' className='text-base font-normal text-txt_Clr'>
                                     Card Thickness
                                 </label>
-                                <select id='thickness' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='thickness' {...register("thickness", { required: true })} className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>11 pt 230 GSM</option>
                                 </select>
                             </div>
@@ -109,7 +151,7 @@ function InstantPrice() {
                                 <label htmlFor='lamination' className='text-base font-normal text-txt_Clr'>
                                     Coating Lamination
                                 </label>
-                                <select id='lamination' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='lamination' {...register("lamination", { required: true })} className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>Glossy Lamination</option>
                                 </select>
                             </div>
@@ -117,7 +159,7 @@ function InstantPrice() {
                                 <label htmlFor='finishing' className='text-base font-normal text-txt_Clr'>
                                     Extra Finishing
                                 </label>
-                                <select id='finishing' className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
+                                <select id='finishing' {...register("finishing", { required: true })} className='text-xs p-2 font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'>
                                     <option>Debossing</option>
                                 </select>
                             </div>
@@ -130,7 +172,8 @@ function InstantPrice() {
                                 <textarea
                                     id='description'
                                     rows={6}
-                                    className='text-xs font-normal text-[#B1B1B1] px-1 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
+                                    {...register("description", { required: true })}
+                                    className='text-xs font-normal text-[#B1B1B1] p-2 border border-[#CDCFCE] rounded-[5px] focus:outline-none w-full'
                                     placeholder='Provide detailed packaging specifications'>
                                 </textarea>
                             </div>
@@ -140,7 +183,9 @@ function InstantPrice() {
                                 </label>
                                 <input
                                     id='file'
-                                    name='file'
+                                    {...register("file", {
+                                        required: "picture is required",
+                                    })}
                                     type='file'
                                     placeholder=''
                                     className='text-xs font-normal text-[#B1B1B1] px-1 focus:outline-none w-full'

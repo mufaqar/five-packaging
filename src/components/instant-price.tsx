@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import React, { FormEvent, useRef, useState } from 'react'
 import { useForm, SubmitHandler } from "react-hook-form"
 
 
 function InstantPrice() {
     const [loading, setLoading] = useState(false);
+    const router = useRouter()
 
     const {
         register,
@@ -29,9 +31,9 @@ function InstantPrice() {
                 console.log('Response received');
                 if (res.status === 200) {
                     console.log('Response succeeded!');
-                    alert('Message Successfully send.!');
-                    reset();
+                    // reset();
                     setLoading(false);
+                    // router.push('/thank-you')
                 }
             });
         }
@@ -188,6 +190,7 @@ function InstantPrice() {
                                     })}
                                     type='file'
                                     placeholder=''
+                                    accept="image/*"
                                     className='text-xs font-normal text-[#B1B1B1] px-1 focus:outline-none w-full'
                                 />
                                 <p className='text-xs font-normal text-txt_Clr'>
@@ -197,7 +200,7 @@ function InstantPrice() {
                         </div>
                         <div className="w-full text-center">
                             <button type='submit' className="text-base font-semibold text-white bg-primary hover:bg-secondary px-4 py-3 rounded-[5px] max-w-[471px] mx-auto w-full">
-                                Proceed
+                                {loading ? 'Sending...' : 'Proceed'}
                             </button>
                         </div>
                     </form>

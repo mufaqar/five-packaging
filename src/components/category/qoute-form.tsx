@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form';
 
 function Qoute_Form() {
 
     const [loading, setLoading] = useState(false);
+    const router = useRouter()
 
     const {
         register,
@@ -28,10 +30,9 @@ function Qoute_Form() {
             }).then((res) => {
               console.log('Response received');
               if (res.status === 200) {
-                console.log('Response succeeded!');
-                alert('Message Successfully send.!');
                 reset();
                 setLoading(false);
+                router.push('/thank-you')
               }
             });
           }

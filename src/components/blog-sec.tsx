@@ -15,7 +15,7 @@ const Blog_Sec = () => {
                        <Featured_Posts />
                     </div>
                 </div>
-                <div className='md:w-1/3 w-full md:pl-10'>
+                <div className='md:w-1/3 w-full md:pl-10 md:block hidden'>
                     <p className='text-end'>
                         <Link href="#" className='md:text-base text-xs font-medium text-white underline hover:no-underline'>
                             View all

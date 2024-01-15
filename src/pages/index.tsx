@@ -23,7 +23,7 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
       <Why_ChooseUs />
       <Testimonials data={testimonialsRes} />
       <Faqs data={faqRes} />
-      <section className='py-16'>
+      <section className='md:py-16 py-8'>
         <div className='container mx-auto px-4'>
           <div>
             <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>

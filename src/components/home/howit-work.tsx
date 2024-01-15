@@ -3,7 +3,7 @@ import ServiceBox from './serviceBox'
 
 function HowIt_work() {
     return (
-        <section className='py-16 bg-primary'>
+        <section className='md:py-16 py-8 bg-primary md:block hidden'>
             <div className='container mx-auto px-4'>
                 <div>
                     <h2 className='md:text-4xl text-3xl font-semibold text-white text-center'>

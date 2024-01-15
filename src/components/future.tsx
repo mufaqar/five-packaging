@@ -5,7 +5,7 @@ import Img_Box from './img-box'
 
 function Future() {
     return (
-        <section className='py-16'>
+        <section className='md:py-16 py-8 md:block hidden'>
             <div className='container mx-auto px-4'>
                 <div>
                     <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr text-center'>

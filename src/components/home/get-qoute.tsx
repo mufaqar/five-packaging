@@ -3,7 +3,7 @@ import React from 'react'
 
 function Get_Qoute() {
     return (
-        <section className='py-16 bg-[url("/images/qoute-bg.png")] bg-center bg-cover bg-no-repeat'>
+        <section className='md:py-16 py-8 bg-[url("/images/qoute-bg.png")] bg-center bg-cover bg-no-repeat'>
             <div className='container mx-auto px-4'>
                 <div className='max-w-[480px] mx-auto'>
                     <h2 className='text-2xl font-semibold text-white text-center'>

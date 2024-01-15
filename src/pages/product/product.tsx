@@ -12,6 +12,7 @@ import { urlForImage } from '../../../sanity/lib/image'
 import Head from 'next/head'
 import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
+import Blog_Sec from '@/components/blog-sec'
 
 
 export default function Product({ productRes, faqRes }: any) {
@@ -36,6 +37,7 @@ export default function Product({ productRes, faqRes }: any) {
                 <Technical_Specs mailerbox={productRes?.mailerbox} />
                 <Qoute_Sec />
                 <Choose_Us />
+                <Blog_Sec />
                 <Cat_Faqs faqRes={faqRes} />
                 <Order_Process data={productRes?.orderprocess} />
                 <Cta />

@@ -10,6 +10,7 @@ import Get_Qoute from '@/components/home/get-qoute'
 import { client } from '../../sanity/lib/client'
 import { Qcategories, Qfaqs, Qproducts, Qtestimonials } from '../../sanity/queries'
 import Future from '@/components/future'
+import Blog_Sec from '@/components/blog-sec'
 const inter = Inter({ subsets: ['latin'] })
 export default function Home({ testimonialsRes, faqRes, categoriesRes, productsRes }: any) {
 
@@ -22,6 +23,7 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
       <HowIt_work />
       <Why_ChooseUs />
       <Testimonials data={testimonialsRes} />
+      <Blog_Sec />
       <Faqs data={faqRes} />
       <section className='md:py-16 py-8'>
         <div className='container mx-auto px-4'>

@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <header className='lg:block hidden'>
+      <header className='lg:block hidden border-b border-[#D9D9D987]'>
         <div className='border-b border-[#D9D9D987] py-1'>
           <div className='container mx-auto px-4 py-3'>
             <ul className='flex md:flex-row flex-col items-center justify-center gap-1.5'>
@@ -86,7 +86,7 @@ function Header() {
           <ul className='flex justify-between gap-5'>
             <li>
               <Link href="#" className='bg-transparent border border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 text-sm font-semibold rounded-[5px] inline-flex'>
-                Get a Free Quote
+                Beat the Price
               </Link>
             </li>
             <li>
@@ -97,7 +97,7 @@ function Header() {
           </ul>
         </div>
       </header>
-      <header className='lg:hidden block border-b border-[#D9D9D987] '>
+      <header className='lg:hidden block border-b border-[#D9D9D987]'>
         <div className='bg-[#F3F3F3] py-1'>
           <div className='container mx-auto px-4 py-3 flex gap-5 items-center justify-between'>
             <div className='w-1/2'>

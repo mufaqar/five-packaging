@@ -14,6 +14,7 @@ import Head from 'next/head'
 import Qoute_Sec from '@/components/products/qoute-sec'
 import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
+import Blog_Sec from '@/components/blog-sec'
 
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
@@ -60,6 +61,7 @@ export default function Category({ categoryRes, productsRes, faqRes }: any) {
                 <InstantPrice />
                 <Qoute_Sec />
                 <Choose_Us />
+                <Blog_Sec />
                 <Cat_Faqs faqRes={faqRes} />
                 {categoryRes?.orderprocess?.length > 0 && <Order_Process data={categoryRes?.orderprocess} />}
                 

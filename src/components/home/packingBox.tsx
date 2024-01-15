@@ -4,7 +4,7 @@ import React from 'react'
 
 function PackingBox({ title, content, img, slug }: any) {
     return (
-        <div className='group'>
+        <div className='group px-3'>
             <Link href={`/${slug?.current}`}>
             <div className='bg-[#F7F7F7] cursor-pointer'>
                 <Image src={img} alt='pack/1' width={306} height={340} className='mx-auto mb-4 group-hover:scale-105' />

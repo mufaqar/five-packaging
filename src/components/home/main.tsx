@@ -22,8 +22,8 @@ function MainBanner() {
                 </div>
             </div>
             <div className='bg-white py-5'>
-                <div className='container mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-5 lg:divide-x'>
-                    <div className='px-5 flex gap-2 items-center'>
+                <div className='container mx-auto px-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-0 lg:divide-x lg:divide-y-0 divide-y'>
+                    <div className='p-5 flex gap-2 items-center'>
                         <Image src="/images/shipping.png" alt="shipping" width={54} height={30} />
                         <div>
                             <h3 className='text-base leading-4 font-semibold text-title_Clr'>
@@ -34,7 +34,7 @@ function MainBanner() {
                             </p>
                         </div>
                     </div>
-                    <div className='px-5 flex gap-2 items-center'>
+                    <div className='p-5 flex gap-2 items-center'>
                         <Image src="/images/support.png" alt="support" width={40} height={33} />
                         <div>
                             <h3 className='text-base leading-4 font-semibold text-title_Clr'>
@@ -45,7 +45,7 @@ function MainBanner() {
                             </p>
                         </div>
                     </div>
-                    <div className='px-5 flex gap-2 items-center'>
+                    <div className='p-5 flex gap-2 items-center'>
                         <Image src="/images/secured.png" alt="secured" width={37} height={30} />
                         <div>
                             <h3 className='text-base leading-4 font-semibold text-title_Clr'>
@@ -56,7 +56,7 @@ function MainBanner() {
                             </p>
                         </div>
                     </div>
-                    <div className='px-5 flex gap-2 items-center'>
+                    <div className='p-5 flex gap-2 items-center'>
                         <Image src="/images/gurantee.png" alt="gurantee" width={38} height={35} />
                         <div>
                             <h3 className='text-base leading-4 font-semibold text-title_Clr'>

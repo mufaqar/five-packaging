@@ -58,11 +58,11 @@ export default function Category({ categoryRes, productsRes, faqRes }: any) {
                     </div>
                 </section>
                 <InstantPrice />
-                <Technical_Specs />
                 <Qoute_Sec />
                 <Choose_Us />
                 <Cat_Faqs faqRes={faqRes} />
-                <Order_Process />
+                {categoryRes?.orderprocess?.length > 0 && <Order_Process data={categoryRes?.orderprocess} />}
+                
                 <Cta />
             </main>
         </>

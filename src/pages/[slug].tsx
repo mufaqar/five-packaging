@@ -18,7 +18,7 @@ export default Slug
 
 export async function getServerSideProps(pageContext: any) {
      const slug = pageContext.query.slug;
-
+     
      const productRes = await client.fetch(QSingleProducts, { slug });
      const categoryRes = await client.fetch(QSingleCategory, { slug });
      const productsRes = await client.fetch(Qproducts);

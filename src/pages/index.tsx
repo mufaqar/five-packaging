@@ -11,6 +11,7 @@ import { client } from '../../sanity/lib/client'
 import { Qcategories, Qfaqs, Qproducts, Qtestimonials } from '../../sanity/queries'
 import Future from '@/components/future'
 import Blog_Sec from '@/components/blog-sec'
+import Experts_Details from '@/components/home/Experts-detail'
 const inter = Inter({ subsets: ['latin'] })
 export default function Home({ testimonialsRes, faqRes, categoriesRes, productsRes }: any) {
 
@@ -21,6 +22,7 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
       <Packing_Design data={productsRes} title="Custom Packaging Boxes" content="Choose a packaging style for your custom boxes, start designing with us, and get your boxes with the most advanced printing techniques." />
       <Future />
       <HowIt_work />
+      <Experts_Details />
       <Why_ChooseUs />
       <Testimonials data={testimonialsRes} />
       <Blog_Sec />

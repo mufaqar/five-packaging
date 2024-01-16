@@ -28,14 +28,14 @@ const Product_Gallery = ({ data }) => {
     focusOnSelect: true,
   };
 
-  // const slider = React.useRef(null);
+  const sliderRef = React.useRef(null);
 
   return (
     <div className="content relative">
       <div className="container">
         <Slider  {...settings}
           asNavFor={nav1}
-          ref={(slider) => setSlider1(slider)}
+          ref={(slider) => setSlider1(sliderRef.current = slider)}
         >
           {data?.gallery?.map((item, idx) => (
             <div
@@ -61,8 +61,8 @@ const Product_Gallery = ({ data }) => {
             </div>
           ))}
         </div>
-        <button className="absolute block top-1/2 left-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => slider1?.current?.slickPrev()}><IoIosArrowBack /></button>
-        <button className="absolute block top-1/2 right-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => slider1?.current?.slickNext()}><IoIosArrowForward /></button>
+        <button className="absolute block top-1/2 left-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => sliderRef?.current?.slickPrev()}><IoIosArrowBack /></button>
+        <button className="absolute block top-1/2 right-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => sliderRef?.current?.slickNext()}><IoIosArrowForward /></button>
       </div>
     </div>
   );

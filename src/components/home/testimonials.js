@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
 
-function Testimonials({ data }: any) {
+function Testimonials({ data }) {
     const settings = {
         dots: false,
         infinite: true,
@@ -42,7 +42,7 @@ function Testimonials({ data }: any) {
                 <div className=''>
                     <Slider ref={slider} {...settings} className='h-full'>
                         {
-                            data?.map((t: any, i: number) => {
+                            data?.map((t, i) => {
                                 return (
                                     <div key={i} className='px-2'>
                                         <div className='bg-white py-14 lg:px-12 px-5 rounded-[10px] shadow-[0_4px_63px_0_rgba(0,0,0,0.1)] hover:shadow-none'>

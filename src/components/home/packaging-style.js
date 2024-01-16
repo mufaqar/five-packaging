@@ -4,7 +4,7 @@ import { urlForImage } from '../../../sanity/lib/image'
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-function Packaging_Style({ data }: any) {
+function Packaging_Style({ data }) {
     const settings = {
         dots: false,
         infinite: true,
@@ -51,7 +51,7 @@ function Packaging_Style({ data }: any) {
                 <div className='mt-10 relative'>
                     <Slider ref={slider} {...settings} className='h-full'>
                         {
-                            data.map((category: any, i: number) => (
+                            data.map((category, i) => (
                                 <PackingBox
                                     key={i}
                                     title={category?.name}

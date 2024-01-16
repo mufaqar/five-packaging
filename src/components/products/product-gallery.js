@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Image from 'next/image'
 import { urlForImage } from "../../../sanity/lib/image";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const Product_Gallery = ({data}) => {
+const Product_Gallery = ({ data }) => {
 
   const [nav1, setNav1] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -27,12 +28,14 @@ const Product_Gallery = ({data}) => {
     focusOnSelect: true,
   };
 
+  const sliderRef = React.useRef(null);
+
   return (
-    <div className="content">
+    <div className="content relative">
       <div className="container">
-        <Slider {...settings}
+        <Slider  {...settings}
           asNavFor={nav1}
-          ref={(slider) => setSlider1(slider)}
+          ref={(slider) => setSlider1(sliderRef.current = slider)}
         >
           {data?.gallery?.map((item, idx) => (
             <div
@@ -41,7 +44,7 @@ const Product_Gallery = ({data}) => {
               onClick={() => {
                 slider1?.slickGoTo(idx)
               }}>
-              <Image src={urlForImage(item?.asset?._ref).width(534)?.url()} alt={item.alt} width={435} height={365} className='mx-auto' />
+              <Image src={urlForImage(item?.asset?._ref).width(534)?.url()} alt={item.alt} width={435} height={365} className='mx-auto h-[450px] w-full object-contain' />
             </div>
           ))}
         </Slider>
@@ -58,6 +61,8 @@ const Product_Gallery = ({data}) => {
             </div>
           ))}
         </div>
+        <button className="absolute block top-1/2 left-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => sliderRef?.current?.slickPrev()}><IoIosArrowBack /></button>
+        <button className="absolute block top-1/2 right-0 border rounded-full p-1 transform -translate-y-1/2 text-base bg-primary text-white " onClick={() => sliderRef?.current?.slickNext()}><IoIosArrowForward /></button>
       </div>
     </div>
   );

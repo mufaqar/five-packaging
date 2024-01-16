@@ -18,8 +18,8 @@ import Blog_Sec from '@/components/blog-sec'
 
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
-    const relatedProducts = productsRes?.filter((item: any) => item?.categories?.some((i:any)=>i.slug?.current === query.slug))
- 
+    const relatedProducts = productsRes?.filter((item: any) => item?.categories?.some((i: any) => i.slug?.current === query.slug))
+
     return (
         <>
             <Head>
@@ -59,12 +59,14 @@ export default function Category({ categoryRes, productsRes, faqRes }: any) {
                     </div>
                 </section>
                 <InstantPrice />
+                <Technical_Specs />
                 <Qoute_Sec />
                 <Choose_Us />
                 <Blog_Sec />
                 <Cat_Faqs faqRes={faqRes} />
+                <Order_Process />
                 {categoryRes?.orderprocess?.length > 0 && <Order_Process data={categoryRes?.orderprocess} />}
-                
+
                 <Cta />
             </main>
         </>

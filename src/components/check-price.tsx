@@ -82,11 +82,11 @@ const CheckPrice = () => {
                             <p className='text-base font-semibold text-black'>Production Time</p>
                             <div className='flex items-center'>
                                 <input id="standared" type="radio" value="" name="production_time" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
-                                <label htmlFor="standared" className="w-full ms-2 text-base font-semibold text-black">Standard (12 - 15 Business Days) </label>
+                                <label htmlFor="standared" className="w-full ms-2 text-base font-semibold text-black cursor-pointer">Standard (12 - 15 Business Days) </label>
                             </div>
                             <div className='flex items-center'>
                                 <input id="rush" type="radio" value="" name="production_time" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
-                                <label htmlFor="rush" className="w-full ms-2 text-base font-semibold text-black">Rush (6 - 8 Business Days)</label>
+                                <label htmlFor="rush" className="w-full ms-2 text-base font-semibold text-black cursor-pointer">Rush (6 - 8 Business Days)</label>
                             </div>
                         </div>
                     </div>
@@ -143,12 +143,12 @@ const CheckPrice = () => {
                         <div className='bg-primary/10 p-5 rounded-md border border-primary'>
                             <p className='text-base font-semibold text-black'>Production Time</p>
                             <div className='flex items-center'>
-                                <input id="standared" type="radio" value="" name="production_time" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
-                                <label htmlFor="standared" className="w-full ms-2 text-base font-semibold text-black">Standard (12 - 15 Business Days) </label>
+                                <input id="standared1" type="radio" value="" name="production_time1" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
+                                <label htmlFor="standared1" className="w-full ms-2 text-base font-semibold text-black cursor-pointer">Standard (12 - 15 Business Days) </label>
                             </div>
                             <div className='flex items-center'>
-                                <input id="rush" type="radio" value="" name="production_time" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
-                                <label htmlFor="rush" className="w-full ms-2 text-base font-semibold text-black">Rush (6 - 8 Business Days)</label>
+                                <input id="rush1" type="radio" value="" name="production_time1" className="w-4 h-4 accent-primary text-primary bg-white focus:ring-primary" />
+                                <label htmlFor="rush1" className="w-full ms-2 text-base font-semibold text-black cursor-pointer">Rush (6 - 8 Business Days)</label>
                             </div>
                         </div>
                     </div>

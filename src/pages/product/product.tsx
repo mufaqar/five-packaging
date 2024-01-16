@@ -13,6 +13,7 @@ import Head from 'next/head'
 import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
 import Blog_Sec from '@/components/blog-sec'
+import CheckPrice from '@/components/check-price'
 
 
 export default function Product({ productRes, faqRes }: any) {
@@ -33,6 +34,7 @@ export default function Product({ productRes, faqRes }: any) {
                 <Banner data={productRes} />
                 <Get_Started data={productRes} />
                 <Content_Slider data={productRes?.grid} />
+                <CheckPrice />
                 <InstantPrice />
                 <Technical_Specs mailerbox={productRes?.mailerbox} />
                 <Qoute_Sec />

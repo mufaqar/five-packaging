@@ -102,7 +102,7 @@ const RelatedProducts = () => {
                     <Slider ref={slider} {...settings}>
                         {data.map((item, idx) => {
                             return (
-                                <div key={idx} className=' md:h-[430px] md:w-[320px]  rounded-2xl mb-8 '>
+                                <div key={idx} className=' md:h-[430px] md:pr-2 md:w-[320px]  rounded-2xl mb-8 '>
                                     <div className='mt-3 bg-[#FFF8F1] rounded-2xl px-3 py-3'>
                                         <Image className=' md:h-[338px] rounded-md' src={item.img} alt='make-product' width={300} height={338} />
                                         <div className='py-2  rounded-md'>

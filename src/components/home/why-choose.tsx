@@ -1,70 +1,82 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaPlay } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
+export default function Why_ChooseUs() {
 
-function Why_ChooseUs() {
+
     return (
-        <section className='md:py-16 py-8'>
-            <div className='container mx-auto px-4'>
-                <div className='bg-darkBlue max-w-[666px] mx-auto md:py-12 p-4 rounded-[93px]'>
-                    <h2 className='md:text-4xl text-2xl font-semibold text-white text-center'>
-                        Why Choose Us?
-                    </h2>
-                    <p className='md:text-lg text-base font-normal text-white text-center max-w-[800px] mx-auto mt-5'>
-                        Accomplish Your Business Goals With Our Superior Service
-                    </p>
-                </div>
-                <div className='flex md:flex-row flex-row justify-between items-center gap-7 py-7 mt-10 border-b border-[#DEDEDE]'>
-                    <div className='md:w-fit w-full'>
-                        <Image src="/images/dimension.png" alt="dimension" width={53} height={52} className='md:ml-0 mx-auto' />
-                        <h3 className='md:text-xl text-[11px] font-semibold text-txt_Clr md:text-start text-center mt-1'>
-                            Modern Design and Dimensions
-                        </h3>
-                    </div>
-                    <div className='md:w-fit w-full'>
-                        <Image src="/images/charges.png" alt="charges" width={57} height={53} className='md:ml-0 mx-auto' />
-                        <h3 className='md:text-xl text-[11px] font-semibold text-txt_Clr md:text-start text-center mt-1'>
-                            No Extra Charges
-                        </h3>
-                    </div>
-                    <div className='md:w-fit w-full'>
-                        <Image src="/images/delivery.png" alt="delivery" width={63} height={43} className='md:ml-0 mx-auto' />
-                        <h3 className='md:text-xl text-[11px] font-semibold text-txt_Clr md:text-start text-center mt-1'>
-                            Super-Fast Delivery
-                        </h3>
-                    </div>
-                    <div className='md:w-fit w-full'>
-                        <Image src="/images/distinct.png" alt="distinct" width={38} height={35} className='md:ml-0 mx-auto' />
-                        <h3 className='md:text-xl text-[11px] font-semibold text-txt_Clr md:text-start text-center mt-1'>
-                            Distinctive Finishes
-                        </h3>
+        <>
+            <section>
+                <div className='md:py-16 py-8 bg-[#FDF0D5]'>
+                    <div className='container mx-auto px-4'>
+                        <div className='md:w-[487px] md:h-[235px] relative m-auto'>
+                            <Image src="/images/sliderbrand.png" width={487} height={235} alt='make-product' className='w-full object-cover rounded-lg' />
+                            <Image src="/images/youtube.png" alt='make-product' width={100} height={100} className="    absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                        </div>
+
+                        <div className='pt-8'>
+                            <h3 className='md:w-[854px] m-auto  text-center text-[#1F1F1F] text-[36px] leading-[41px] font-[Poppinssemibold]'>Custom packaging success with 360° half price packaging aproach</h3>
+                        </div>
+
+                        <div className='md:grid md:grid-cols-3  pt-8 md:gap-y-4 space-y-8 md:space-y-0'>
+
+                            {
+                                data?.map((item: any) => {
+                                    return (
+                                        <div className=''>
+                                            <Image src={item.icon} className='w-[48px] h-[48px] md:mx-0 mx-auto' alt='make-product' width={48} height={48} />
+                                            <h1 className='text-[#1F1F1F] text-[16px] leading-[18px] md:text-left text-center pt-2 font-[Poppinssemibold]'>{item.title}</h1>
+                                            <p className='md:w-[350px] text-[#1F1F1F] text-[15px] md:text-left text-center leading-[17px] pt-1 font-[PoppinsRegular]'>{item.des}</p>
+                                            <hr className="h-px md:hidden  my-8 bg-[#d1c1c1] border-0 dark:bg-gray-700"/>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+
                     </div>
                 </div>
+
+            </section>
+            <div className='container mx-auto px-4 text-center py-10'>
+                <button className='bg-[#C03213] font-[Poppinssemibold] md:w-[198px] w-full h-[54px] text-[#FFFFFF] text-[13px] leading-[19px]'> Request for Quote</button>
             </div>
-            <div className='bg-[#FDF0D5] py-10 mt-8'>
-                <div className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
-                    <div className='md:w-1/3 w-full md:block hidden'>
-                        <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
-                            How do we make our products
-                        </h2>
-                        <p className='text-2xl font-normal text-title_Clr'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        </p>
-                    </div>
-                    <div className='md:w-2/3 w-full relative'>
-                        <Image src="/images/make-product.png" alt='make-product' width={826} height={472} className='w-full object-cover rounded-lg' />
-                        <FaPlay className="text-5xl text-white absolute inset-y-1/2 inset-x-1/2" />
-                    </div>
-                </div>
-            </div>
-            <div className='mt-10 md:block hidden'>
-                <Link href="#" className='bg-primary hover:bg-secondary px-8 py-4 text-sm font-semibold text-white block w-fit mx-auto'>
-                    Request for Quote
-                </Link>
-            </div>
-        </section>
+        </>
     )
 }
 
-export default Why_ChooseUs
+
+
+
+const data = [{
+    icon: "/images/packaging/package1.png",
+    title: "International Sourcing",
+    des: "Unlock unbeatable packaging solutions with Five Packaging’s international sourcing"
+},
+{
+    icon: "/images/packaging/package2.png",
+    title: "Easy Price Matching",
+    des: "Get from idea to finished design quickly, with professionally made and editable templates"
+},
+{
+    icon: "/images/packaging/package3.png",
+    title: "HPP as Premium Acquisition Partner",
+    des: "Five Packaging - your premium acquisition partner for exceptional packaging solutions at half the cost."
+},
+{
+    icon: "/images/packaging/package4.png",
+    title: "Contract Packaging",
+    des: "Streamline your packaging process with Five Packaging’s professional expert contract packaging service"
+},
+{
+    icon: "/images/packaging/package5.png",
+    title: "IWarehouse and IMS",
+    des: "Efficient Warehousing and Inventory Management Solutions customized for your business needs."
+},
+{
+    icon: "/images/packaging/package6.png",
+    title: "Logistics Outstanding with 3PL Service",
+    des: "Integrate your supply chain with Five Packaging’s 3PL logistics outsourcing for efficient and cost-effective solutions."
+},
+]

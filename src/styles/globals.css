@@ -27,7 +27,14 @@
   font-family: 'PoppinsRegular';
   src: url('../../public/fonts/Poppins-Regular.ttf');
 }
-
+@font-face {
+  font-family: 'Poppinsmedium';
+  src: url('../../public/fonts/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: 'Poppinssemibold';
+  src: url('../../public/fonts/Poppins-SemiBold.ttf');
+}
 h1,
 h2,
 h3,
@@ -145,4 +152,8 @@ html {
 #grid_slider .slick-dots li button:hover:before,
 #grid_slider .slick-dots li.slick-active button:before {
   background-color: #9CEB1B;
+}
+
+.btn{
+  background-color: black;
 }

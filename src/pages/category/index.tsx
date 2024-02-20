@@ -1,21 +1,24 @@
 import Banner from '@/components/category/banner'
 import Choose_Us from '@/components/category/choose-us'
 import ContentBox from '@/components/category/contentBox'
-import Cta from '@/components/category/cta'
-import Cat_Faqs from '@/components/category/faqs'
+import Cta from '@/components/category/ordermail'
+import CategoryFaqs from '@/components/categoryfaqs'
+import Orderingprocess from '@/components/category/orderingprocess'
 import Get_Started from '@/components/category/get-started'
-import Order_Process from '@/components/category/order-process'
+import Mailer from '@/components/category/mailerbox'
 import Technical_Specs from '@/components/category/technical-specs'
 import DesignBox from '@/components/home/designBox'
 import React from 'react'
 import { useRouter } from 'next/router'
 import { urlForImage } from '../../../sanity/lib/image'
 import Head from 'next/head'
+import Order_Process from '@/components/category/order-process'
 import Qoute_Sec from '@/components/products/qoute-sec'
 import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
 import Blog_Sec from '@/components/blog-sec'
-
+import ProductFeatures from '@/components/productfeatures'
+import Footergetstarted from '@/components/category/footergetstarted'
 export default function Category({ categoryRes, productsRes, faqRes }: any) {
     const { query } = useRouter()
     const relatedProducts = productsRes?.filter((item: any) => item?.categories?.some((i: any) => i.slug?.current === query.slug))
@@ -32,9 +35,23 @@ export default function Category({ categoryRes, productsRes, faqRes }: any) {
                 <meta name='robots' content='index,follow' />
                 <meta name='subtitle' content={categoryRes?.metadescription} />
                 <meta name='target' content={categoryRes?.metatitle} />
+             
             </Head>
             <main>
-                <Banner data={categoryRes} />
+
+            <Banner data={categoryRes} />
+                <Get_Started data={categoryRes}  />
+                {/* <Content_Slider data={categoryRes?.grid} /> */}
+               <Mailer/>
+                <InstantPrice />
+                <Technical_Specs mailerbox={categoryRes?.mailerbox} />
+                <Qoute_Sec />
+                <Choose_Us />
+                <CategoryFaqs faqRes={faqRes} />
+                <Orderingprocess />
+               <Footergetstarted/>
+                <Blog_Sec />
+                {/* <Banner data={categoryRes} />
                 <Get_Started data={categoryRes} />
                 <Content_Slider data={categoryRes?.grid} />
                 <section className='py-16'>
@@ -67,7 +84,8 @@ export default function Category({ categoryRes, productsRes, faqRes }: any) {
                 <Order_Process />
                 {categoryRes?.orderprocess?.length > 0 && <Order_Process data={categoryRes?.orderprocess} />}
 
-                <Cta />
+                <Cta /> */}
+                
             </main>
         </>
     )

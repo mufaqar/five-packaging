@@ -1,6 +1,6 @@
 import Choose_Us from '@/components/category/choose-us'
 import ContentBox from '@/components/category/contentBox'
-import Cta from '@/components/category/cta'
+import Ordermail from '@/components/category/ordermail'
 import Cat_Faqs from '@/components/category/faqs'
 import Get_Started from '@/components/category/get-started'
 import Order_Process from '@/components/category/order-process'
@@ -13,8 +13,10 @@ import Head from 'next/head'
 import InstantPrice from '@/components/instant-price'
 import Content_Slider from '@/components/content-slider'
 import Blog_Sec from '@/components/blog-sec'
-
-
+import ProductFeatures from '@/components/productfeatures'
+import CustomBox from '@/components/custombox'
+import ReviewProducts from '@/components/reviewproducts'
+import RelatedProducts from '@/components/relatedproducts'
 export default function Product({ productRes, faqRes }: any) {
     return (
         <>
@@ -32,15 +34,20 @@ export default function Product({ productRes, faqRes }: any) {
             <main>
                 <Banner data={productRes} />
                 <Get_Started data={productRes} />
+                <ProductFeatures/>
                 <Content_Slider data={productRes?.grid} />
+               <CustomBox/>
+               <Order_Process data={productRes?.orderprocess} />
                 <InstantPrice />
                 <Technical_Specs mailerbox={productRes?.mailerbox} />
                 <Qoute_Sec />
                 <Choose_Us />
-                <Blog_Sec />
+                <ReviewProducts/>
                 <Cat_Faqs faqRes={faqRes} />
-                <Order_Process data={productRes?.orderprocess} />
-                <Cta />
+                <Ordermail />
+                <RelatedProducts/>
+                <Blog_Sec />
+
             </main>
         </>
     )

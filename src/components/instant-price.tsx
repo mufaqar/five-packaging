@@ -40,7 +40,7 @@ function InstantPrice() {
     }
 
     return (
-        <section className='py-7'>
+        <section className=''>
             <div className='container mx-auto px-4 md:px-10 py-10 bg-[#FDF0D5] rounded-[18px]'>
                 <div>
                     <h2 className='text-3xl font-medium text-title_Clr'>

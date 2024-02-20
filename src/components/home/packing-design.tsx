@@ -4,7 +4,7 @@ import { urlForImage } from '../../../sanity/lib/image'
 
 function Packing_Design({ data, title, content }: any) {
     return (
-        <section className='md:py-16 py-8' id="shapes-and-style">
+        <section className='md:py-10 ' id="shapes-and-style">
             <div className='container mx-auto px-4'>
                 <div>
                     <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr text-center'>

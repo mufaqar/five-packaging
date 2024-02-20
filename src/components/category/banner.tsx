@@ -14,7 +14,7 @@ function Banner({data}:any) {
                     <p className='text-lg leading-6 my-5 max-w-[510px]'>
                         {data?.excerpt}
                     </p>
-                    <Image src={urlForImage(data?.image?.asset?._ref).width(534)?.url()} alt={data?.image?.alt || data?.name} width={534} height={400} className='mx-auto' />
+                    <Image src={urlForImage(data?.image?.asset?._ref).width(534)?.url()} alt={data?.image?.alt || data?.name} width={534} height={400} className='mx-auto h-[410px]' />
                 </div>
                 <div>
                     <Qoute_Form />

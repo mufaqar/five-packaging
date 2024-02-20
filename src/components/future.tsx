@@ -16,8 +16,26 @@ function Future() {
                     </p>
                 </div>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-7 mt-10'>
-                    <Img_Box />
-                    <Img_Box />
+                    {data?.map((item: any) => {
+                        return (
+                            <div className='relative'>
+                                <Image src={item.img} alt='friendly' width={567} height={378} className='object-cover h-full w-full' />
+                                <div className='absolute bottom-0 w-full p-8 flex flex-col md:gap-5 gap-2'>
+                                    <p className='md:text-xl text-base font-normal text-white'>
+                                        {item.title}
+                                    </p>
+                                    <h4 className='md:text-2xl text-xl font-medium text-white max-w-[330px]'>
+                                        {item.des}
+                                    </h4>
+                                    <Link href="#" className='px-6 py-3 text-sm font-semibold text-white rounded-[5px] border border-white inline-block w-fit bg-transparent hover:bg-primary hover:border-primary'>
+                                        {item.button}
+                                    </Link>
+                                </div>
+                            </div>
+
+                        )
+                    })}
+
                 </div>
             </div>
         </section>
@@ -25,3 +43,16 @@ function Future() {
 }
 
 export default Future
+
+const data = [{
+    img: "/images/friendly.png",
+    title: "ECO-FRIENDLY PACKAGING",
+    des: "Go green with sustainably responsible packaging",
+    button: "Browse products"
+},
+{
+    img: "/images/sustain.png",
+    title: "SUSTAINBILITY EFFORTS",
+    des: "Our mission towards green Future",
+    button: "Learn more"
+}]

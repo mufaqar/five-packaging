@@ -44,11 +44,11 @@ const Product_Gallery = ({ data }) => {
               onClick={() => {
                 slider1?.slickGoTo(idx)
               }}>
-              <Image src={urlForImage(item?.asset?._ref).width(534)?.url()} alt={item.alt} width={435} height={365} className='mx-auto h-[450px] w-full object-contain' />
+              <Image src={urlForImage(item?.asset?._ref).width(534)?.url()} alt={item.alt} width={435} height={365} className='mx-auto h-[365px] w-full object-contain' />
             </div>
           ))}
         </Slider>
-        <div className="thumb-wrapper">
+        <div className="thumb-wrapper pt-8">
           {data?.gallery?.map((item, idx) => (
             <div
               key={item.id}

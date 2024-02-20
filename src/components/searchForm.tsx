@@ -36,7 +36,7 @@ function SearchForm() {
 
     return (
         <div className="">
-            <form action="" className="md:w-[400px] mx-auto w-[350px]">
+            <form action="" className="md:w-[400px] mx-auto ">
                 <div className="relative">
                     <input
                         type="text"

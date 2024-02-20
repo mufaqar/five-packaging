@@ -7,6 +7,7 @@ import Why_ChooseUs from '@/components/home/why-choose'
 import Testimonials from '@/components/home/testimonials'
 import Faqs from '@/components/home/faqs'
 import Get_Qoute from '@/components/home/get-qoute'
+import Process from '@/components/process'
 import { client } from '../../sanity/lib/client'
 import { Qcategories, Qfaqs, Qproducts, Qtestimonials } from '../../sanity/queries'
 import Future from '@/components/future'
@@ -20,11 +21,13 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
       <MainBanner />
       <Packaging_Style data={categoriesRes} />
       <Packing_Design data={productsRes} title="Custom Packaging Boxes" content="Choose a packaging style for your custom boxes, start designing with us, and get your boxes with the most advanced printing techniques." />
+      <Process/>
       <Future />
       <HowIt_work />
       <Experts_Details />
       <Why_ChooseUs />
       <Testimonials data={testimonialsRes} />
+      <Get_Qoute />
       <Blog_Sec />
       <Faqs data={faqRes} />
       <section className='md:py-16 py-8'>
@@ -45,7 +48,7 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
           </div>
         </div>
       </section>
-      <Get_Qoute />
+    
     </main>
   )
 }

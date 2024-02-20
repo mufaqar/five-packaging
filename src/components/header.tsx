@@ -43,7 +43,7 @@ function Header() {
               <Image src="/images/logo.png" alt='logo' width={139} height={58} />
             </Link>
           </div>
-          <div className='lg:w-[45%] w-1/2 flex justify-start'>
+          <div className='md:w-[45%] w-1/2 flex justify-start'>
             <SearchForm />
           </div>
           <ul className='lg:w-[40%] flex justify-between items-center'>

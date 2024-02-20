@@ -3,13 +3,13 @@ import OrderBox from './orderBox'
 
 function Order_Process({ data }: any) {
     return (
-        <section className='py-16 bg-[#F7F7F7]'>
+        <section className='py-16 my-4 bg-[#0E4D66]'>
             <div className='container mx-auto px-4'>
                 <div>
-                    <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
+                    <h2 className='text-[35px] leading-[40px]font-[Poppinssemibold] text-white'>
                         Mailer Box Ordering Process
                     </h2>
-                    <p className='text-lg font-normal text-txt_Clr mt-5'>
+                    <p className='text-[17px] leading-[25px] text-white pt-4 font-[PoppinsRegular]'>
                         A simple, 6-step process for getting custom mailer boxes, with dedicated support and ongoing consulting every step of the way.
                     </p>
                 </div>

@@ -7,7 +7,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const Content_Slider = ({ data }) => {
 
     const settings = {
-        dots: true,
+       
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -16,7 +16,7 @@ const Content_Slider = ({ data }) => {
     };
     const slider = React.useRef(null);
     return (
-        <section className='py-16 relative' id="grid_slider">
+        <section className='pt-6 relative' id="grid_slider">
             <div className='container mx-auto px-4'>
                 <Slider ref={slider} {...settings}>
                     {

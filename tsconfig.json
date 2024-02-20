@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/components/products/product-gallery.js", "src/components/content-slider.jsx", "src/components/home/packaging-style.js", "src/components/home/testimonials.js"  ],
+, "src/components/products/product-gallery.js", "src/components/content-slider.jsx", "src/components/home/packaging-style.js", "src/components/home/testimonials.js", "src/components/category/mailerbox.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -88,7 +88,7 @@ const Blog_Sec = () => {
                                         </Link>
                                         <div className='flex items-center pt-2'>
                                             <Image className='' src="/images/profile.png" alt='make-product' width={34} height={34} />
-                                            <p className='text-[#868686] font-[PoppinsRegular] text-[16px]'>Eric Bolan Last Updated: DEC 19, 2024</p>
+                                            <p className='text-[#868686] md:font-[PoppinsRegular] md:text-[16px] text-[10px]'>Eric Bolan Last Updated: DEC 19, 2024</p>
                                         </div>
                                         <p className='text-[15px] font-[PoppinsRegular] text-[#252525] pt-2 pb-4'>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. ent abroaty uo. Greath molik cue simo...

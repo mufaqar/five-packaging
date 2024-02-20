@@ -4,16 +4,12 @@ import React from 'react';
 import Slider from "react-slick";
 import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
 const PrevArrow = ({ onClick }) => (
-    <button className="text-red-600 bg-black/10 px-4 py-2 rounded-xl mt-4" onClick={onClick}>
-      Previous
-    </button>
-  );
-  
-  const NextArrow = ({ onClick }) => (
-    <button className="text-red-600 bg-black/10 px-4 py-2 rounded-xl -mt-2" onClick={onClick}>
-      Next
-    </button>
-  );
+    <button className="block md:text-[40px] rounded-full p-1 text-[25px] md:text-[#0E4D66] text-white bg-blue-500 absolute top-1/2 left-0 transform -translate-y-1/2 z-10" onClick={onClick}><HiArrowCircleLeft /></button>
+);
+
+const NextArrow = ({ onClick }) => (
+    <button className="block md:text-[40px] rounded-full text-[25px] p-1  md:text-[#0E4D66] text-white bg-blue-500 absolute top-1/2 right-0 transform -translate-y-1/2 z-10" onClick={onClick}><HiArrowCircleRight /></button>
+);
 const RelatedProducts = () => {
     const data = [
         {
@@ -76,11 +72,14 @@ const RelatedProducts = () => {
                     slidesToScroll: 1,
                     arrows: true,
                     prevArrow: <PrevArrow />,
-                    nextArrow: <NextArrow />,
+                    nextArrow: <NextArrow />
                 }
             }
         ]
     };
+
+
+
     const slider = React.useRef(null);
     return (
         <section className=' md:pt-16 md:pb-6 pt-8'>

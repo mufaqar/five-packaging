@@ -34,7 +34,7 @@ export default function Home({ testimonialsRes, faqRes, categoriesRes, productsR
         <div className='container mx-auto px-4'>
           <div>
             <h2 className='md:text-4xl text-3xl font-semibold text-title_Clr'>
-              Why Custom Packaging Essential for Your Business
+              Why Custom Packaging Essential for Your Business 123
             </h2>
             <p className='text-lg font-normal text-txt_Clr mt-5'>
               We live in a fast-paced world where advancements in technology have allowed people to make informed decisions and better choices. Today, nearly everyone uses a smartphone or laptop to know about consumer products and all other details that will help them make best buying decision. In the business sector, due to significant competition, there is a clear shift from product-centric to a customer-centric approach. Another reason for the shift is ambitious entrepreneurs and small-businessmen running their own brands to better serve the customers.
